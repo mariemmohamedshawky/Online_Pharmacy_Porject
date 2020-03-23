@@ -130,7 +130,7 @@ html {
         <h2>Mena Ali</h2>
         <p class="title">public relationship</p>
         <p>FcAI level3..</p>
-        <p>mena@gmail.com</p>
+        <p>menna@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
