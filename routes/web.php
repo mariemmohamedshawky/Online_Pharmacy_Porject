@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/logout', function () {
 	Auth::logout();
-	return redirect('/home');
+	return view('home');
 });
 
 
-Route::get('/home', function () {
-    return view('Home');
+Route::get('/', function () {
+    return view('home');
 });
 
 Auth::routes();
@@ -33,4 +33,8 @@ Route::get('/user', function () {
 
 Route::get('/admin', function () {
     return view('admin');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
