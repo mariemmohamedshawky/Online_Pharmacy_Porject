@@ -46,8 +46,8 @@
     <div class="container">
         <div class="media-container-row">
             <div class="media-content px-3 align-self-center mbr-white py-2">
-                <h1 class="mbr-text testimonial-text mbr-fonts-style display-7"><span style="color:Tomato;">Online pharmacy</span></h1>
-                <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-1"  style="color:Tomato;">
+                <h1 class="mbr-text testimonial-text mbr-fonts-style display-7"><span style="color:#8B0000;">Online pharmacy</span></h1>
+                <p class="mbr-author-name pt-4 mb-2 mbr-fonts-style display-1"  style="color:#8B0000;">
                    The life
                 </p>
                 <p class="mbr-author-desc mbr-fonts-style display-7" style="color:DodgerBlue;" >

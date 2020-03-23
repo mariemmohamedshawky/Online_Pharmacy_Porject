@@ -150,4 +150,6 @@ alert("Welcome"{{Auth::user()->name}});
 </div>
 </footer>
 </div>
+</body>
+</html>
 

@@ -33,7 +33,7 @@ html {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
+  background-color: black;
   color: white;
 }
 
@@ -90,7 +90,7 @@ html {
      <!-- <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">-->
       <div class="container">
         <h2>Nada Farid</h2>
-        <p class="title">Online pharamcy & Founder</p>
+        <p class="title">Online pharamcy Founder</p>
         <p>FcAI level3.</p>
         <p>nodyfared6@gmail.com</p>
         <p><button class="button">Contact</button></p>
@@ -103,9 +103,9 @@ html {
      
       <div class="container">
         <h2>Marirem shawkey </h2>
-        <p class="title">Art Director</p>
+        <p class="title">Project director</p>
         <p>FcAI level3.</p>
-        <p>miram@gmail.com</p>
+        <p>maroma@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -115,10 +115,46 @@ html {
     <div class="card">
       
       <div class="container">
-        <h2>laila Tark</h2>
-        <p class="title">Designer</p>
+        <h2>leila tariq</h2>
+        <p class="title">Manager</p>
         <p>FcAI level3..</p>
         <p>lelia@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Mena Ali</h2>
+        <p class="title">public relationship</p>
+        <p>FcAI level3..</p>
+        <p>mena@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Mariena Talaat</h2>
+        <p class="title">Hr manager</p>
+        <p>FcAI level3..</p>
+        <p>mery@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Ghorod Mostafa</h2>
+        <p class="title">Hr manager</p>
+        <p>FcAI level3..</p>
+        <p>ghorod@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
