@@ -38,3 +38,11 @@ Route::get('/admin', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/insert_product',"product@insert_product" );
+//get tem we will turn it to post
+Route::get('/add_product',"product@add_product" );
+
+Route::get('/add_product', function () {
+    return view('addpo');
+});
