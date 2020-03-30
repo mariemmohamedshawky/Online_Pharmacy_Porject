@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//routing to show the products stored in DB
+Route::get('/products',"product@show_products" );
+
+
+
+
 Route::get('/logout', function () {
 	Auth::logout();
 	return view('home');
