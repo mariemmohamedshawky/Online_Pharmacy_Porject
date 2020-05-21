@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -10,15 +12,16 @@
   <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
   <meta name="description" content="">
   <title>Add product page</title>
-    <link rel="stylesheet" href="{{URL::asset('/css/-------.css')}}">
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap-reboot.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap-grid.min.css')}}">
+
+ <link rel="stylesheet" href="{{asset('css/tether.min.css')}}">
+
+<link rel="stylesheet" href="{{asset('css/stylec.css')}}">
+<link rel="stylesheet" href="{{asset('css/styles.css')}}">
+
+
   
   
   
@@ -90,7 +93,6 @@
   
 </body>
 </html>
-
 
 
 
