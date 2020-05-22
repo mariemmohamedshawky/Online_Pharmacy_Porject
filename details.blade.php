@@ -1,4 +1,4 @@
-@extends("layout")
+@extends("adminlayout")
 @section("content")
 
 
@@ -35,7 +35,7 @@
       <th scope="row" class="text-primary">{{ $product->po_description }}</th>
       <th scope="row" class="text-primary">{{ $product->po_date        }}</th>      
       <td> <img src="{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_name }}" style="width: 200px; height: 200px;"> </td>
-      <td><input type="submit" class="btn btn-primary mt-4 mb-10" value="add to carts"></td>
+    <td><a href = 'delete/{{ $product->po_id }}<' ><btn type="submit" class="btn btn-primary mt-4 mb-10" value="delete "><a></td>
     
 
     </tr>

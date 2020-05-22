@@ -1,6 +1,7 @@
 <?php
 
-
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
 namespace App\Http\Controllers;
 use App\products;
 use Illuminate\Http\Request;
@@ -45,5 +46,21 @@ public function show_products_admin(){
 	return view ('productad' , compact('products'));
 
 }
+
+/*
+public function index(){
+$products =DB::table('products')->select('select * from products');
+return view ('details' , compact('products'));
+//return view('details',['products'=>$products]);
 }
+*/
+public function destroy($id) {
+DB::delete('delete from products where po_id = ?',[$id]);
+
+return redirect ('/admin');
+
+}
+}
+
+
 

@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user',"product@show_products" );
 Route::get('/admin',"product@show_products_admin" );
 
+//Route::get('/delete-records','product@index');
+
+Route::get('delete/{id}','product@destroy');
 
 Route::get('/logout', function () {
 	Auth::logout();

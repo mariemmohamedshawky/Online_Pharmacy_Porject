@@ -36,7 +36,8 @@
       <th scope="row" class="text-primary">{{ $product->po_date        }}</th>      
       <td> <img src="{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_name }}" style="width: 200px; height: 200px;"> </td>
       <td><input type="submit" class="btn btn-primary mt-4 mb-10" value="Update "></td>
-        <td><input type="submit" class="btn btn-primary mt-4 mb-10" value="delate "></td>
+     
+         <td><a href = 'delete/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="delete "><a></td>
 
     </tr>
     
