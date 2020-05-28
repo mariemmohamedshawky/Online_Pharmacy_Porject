@@ -24,14 +24,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{{url('Add Medicine')}}">Add Medicine <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{url('add_product/')}}">Add Medicine <span class="product"></span></a>
       </li>
         <li class="nav-item active">
-        <a class="nav-link" href="{{url('Delete Medicine')}}">Delete Medicine <span class="sr-only">(current)</span></a>
-      </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="{{url('Update Medicine')}}">Update Medicine <span class="sr-only">(current)</span></a>
-      </li>
+     
         <li class="nav-item active">
         <a class="nav-link" href="{{url('View Orders')}}">View Orders <span class="sr-only">(current)</span></a>
       </li>
@@ -44,7 +40,6 @@
 
       </li>
      @else
-
       <li class="nav-item">
         <a class="nav-link" href="{{url('logout/')}}">Log out</a>
       </li>
@@ -53,12 +48,13 @@
   </div>
 </nav>
       @endguest
+</body>
+</html>
 
 
 
 
-
-      @yield("cont");
+      @yield("cont")
 
 
 

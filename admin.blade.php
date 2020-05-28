@@ -1,5 +1,0 @@
-@extends("adminLayout")
-@section("cont")
-
-
-

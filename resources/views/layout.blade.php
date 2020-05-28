@@ -44,9 +44,6 @@
         <a class="nav-link" href="{{url('logout/')}}">Log out</a>
       </li>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{{url('products')}}">Products</a>
-      </li>
        <li class="nav-item active">
        <a class="nav-link" href="#">Contact us<span class="sr-only">(current)</span></a>
 

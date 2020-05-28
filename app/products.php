@@ -12,4 +12,5 @@ class products extends Model
          return $this->belongsTo("Add/user");
 
      }
+     
 }
