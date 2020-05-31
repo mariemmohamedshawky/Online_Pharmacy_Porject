@@ -42,16 +42,17 @@
             <div class="col-md-8 col-lg-6 form-wrapper" data-form-type="formoid">            
                 <div class="form-head">
                     <h2 class="mbr-section-subtitle form-subtitle mbr-fonts-style align-center pb-3 display-4">
-                        Add Medcine FORM
+                        Edit Medcine FORM
                     </h2>
                   
                 </div>
                 <div class="form1" data-form-type="formoid">
-                    <div data-form-alert="" hidden="">The record added sucessfully!</div>
+                    <div data-form-alert="" hidden="">The record updated sucessfully!</div>
 
 
         <form   action="/edit/<?php echo $products[0]->po_id; ?>" method = "post">
-                        <div class="input-wrap" data-for="email">
+{{ csrf_field() }}                       
+ <div class="input-wrap" data-for="email">
                         	 <input type="hidden" class="form-control" name="name"  value="<?php echo csrf_token();?>">
 
                             <label class="form-label-outside mbr-lighter" for="form-1-email">Name:</label>

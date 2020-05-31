@@ -65,6 +65,19 @@ $products = DB::select('select * from products where po_id = ?',[$id]);
 return view('edit_product',['products'=>$products]);
 }
 
+public function edit(Request $request,Product $product,$id)
+{
+    $productn = request("name");
+    $productp = request("price");
+    $productd= request("des");
+    $productdate =request("expire_date");
+    $productimg=request("img");
+    $data=array('po_name'=>$productn,"po_price"=>$productp,"po_description"=>$productd,"po_date"=>$productdate,"po_img"=>$productimg);
+    DB::table('products')->where('po_id', $id)->update($data);
+    echo "Record updated successfully.<br/>";
+    
+    return redirect("/home");
+}
 
 }
 
