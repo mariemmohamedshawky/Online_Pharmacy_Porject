@@ -53,3 +53,5 @@ Route::get('/add_product',"product@add_product" );
 Route::get('/add_product', function () {
     return view('addpo');
 });
+
+Route::get('showproductdetails/{id}','product@showproductdetails');

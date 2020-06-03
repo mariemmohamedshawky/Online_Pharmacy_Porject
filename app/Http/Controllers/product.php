@@ -78,7 +78,10 @@ public function edit(Request $request,Product $product,$id)
     
     return redirect("/home");
 }
-
+public function showproductdetails($id) {
+    $products = DB::select('select * from products where po_id = ?',[$id]);
+    return view('productdetails',['products'=>$products]);
+    }
 }
 
 

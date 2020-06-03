@@ -17,11 +17,10 @@
     <tr>
 
       <th scope="col">Product Name</th>
-      <th scope="col">Product price</th>
-      <th scope="col">Product Description</th>
-      <th scope="col">Product Date</th>
+      
       <th scope="col">Product Image</th>
-   
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
 
@@ -31,12 +30,10 @@
     <tr>
     
       <th scope="row" class="text-primary">{{ $product->po_name        }}</th>
-      <th scope="row" class="text-primary">{{ $product->po_price        }}</th>
-      <th scope="row" class="text-primary">{{ $product->po_description }}</th>
-      <th scope="row" class="text-primary">{{ $product->po_date        }}</th>      
-      <td> <img src="{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_name }}" style="width: 200px; height: 200px;"> </td>
+     
+      <td> <img src= "/images/{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_img }}" style="width: 200px; height: 200px;"> </td>
       <td><input type="submit" class="btn btn-primary mt-4 mb-10" value="Add to carts"></td>
-    
+      <td><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Details"></td>
 
     </tr>
     

@@ -16,11 +16,11 @@
   <thead class="table table-bordered ">
     <tr>
     
-      <th scope="col">Product Name</th>
-      <th scope="col">Product price</th>
-      <th scope="col">Product Description</th>
-      <th scope="col">Product Date</th>
-      <th scope="col">Product Image</th>
+      <th scope="col" class="text-primary">Product Name</th>
+      <th scope="col" class="text-primary">Product price</th>
+      <th scope="col" class="text-primary">Product Description</th>
+      <th scope="col" class="text-primary">Product Date</th>
+      <th scope="col" class="text-primary">Product Image</th>
    
     </tr>
   </thead>
@@ -30,11 +30,11 @@
   <tbody>
     <tr>
      
-      <th scope="row" class="text-primary">{{ $product->po_name        }}</th>
-      <th scope="row" class="text-primary">{{ $product->po_price        }}</th>
-      <th scope="row" class="text-primary">{{ $product->po_description }}</th>
-      <th scope="row" class="text-primary">{{ $product->po_date        }}</th>      
-      <td> <img src="{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_name }}" style="width: 200px; height: 200px;"> </td>
+      <th scope="row" >{{ $product->po_name        }}</th>
+      <th scope="row" >{{ $product->po_price        }}</th>
+      <th scope="row" >{{ $product->po_description }}</th>
+      <th scope="row" >{{ $product->po_date        }}</th>      
+      <td> <img src=" /images/{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_name }}" style="width: 200px; height: 200px;"> </td>
         <td><a href = 'edit/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Edit "><a></td>
      
          <td><a href = 'delete/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Delete "><a></td>
@@ -53,7 +53,7 @@
 
 <style>
 body {
-  background-image: url('images/3.jpg');
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
