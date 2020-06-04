@@ -3,57 +3,55 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <title>The Products</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
-<table class=" table table-striped w-auto">
-  <thead class="table table-bordered ">
-    <tr>
+  <body>
+<div class="row justify-content-around">
+   @foreach ($products as $product)
     
-      <th scope="col" class="text-primary">Product Name</th>
-      <th scope="col" class="text-primary">Product price</th>
-      <th scope="col" class="text-primary">Product Description</th>
-      <th scope="col" class="text-primary">Product Date</th>
-      <th scope="col" class="text-primary">Product Image</th>
-   
-    </tr>
-  </thead>
 
-@foreach ($products as $product)
-  
-  <tbody>
-    <tr>
-     
-      <th scope="row" >{{ $product->po_name        }}</th>
-      <th scope="row" >{{ $product->po_price        }}</th>
-      <th scope="row" >{{ $product->po_description }}</th>
-      <th scope="row" >{{ $product->po_date        }}</th>      
-      <td> <img src=" /images/{{ $product->po_img }}" class="img-rounded" alt="{{ $product->po_name }}" style="width: 200px; height: 200px;"> </td>
-        <td><a href = 'edit/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Edit "><a></td>
-     
-         <td><a href = 'delete/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Delete "><a></td>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-6" style=" height:470px;">
 
-    </tr>
+            <div class="card" style="width: 14rem;height:400px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #000000;opacity: 90%; border-radius: 35px;">
+                <img class="card-img-top"src=" /images/{{ $product->po_img }}" alt="{{ $product->po_img }}" value = '<?php echo$products[0]->po_img; ?>' style="width:200px;height:200px;">
+             
+                <div class="card-body">
+                    
+                      <div style="font-family:Lucida Handwriting;text-align: center;font-weight:bolder;color:white;font-size: 20px;">{{ $product->po_name}}</div>
+
+                       <div class="form-actions no-color" style="position:center;margin:12px;margin-bottom:5px;">
     
-  </tbody>
+                  
+                   
+                              
+                     
+                      <div><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Add To Card">
+                      </a>
+                      </div>
 
-@endforeach
+                      <div><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="View  Details">
+                      </a>
+                      </div>
 
- 
-</table>
-
+               </div>
+                </div>
+                  </div>
+                    </div>
+           
+           @endforeach
+        </div>
 
 {{ $products->links()  }}
 
+
+
+
+
+
 <style>
 body {
-
+  background-image: url('images/004.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -71,5 +69,7 @@ padding:10px;
 
 </head>
 </html>
+</body>
 
-@endsection
+
+@endsection 
