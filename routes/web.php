@@ -55,3 +55,5 @@ Route::get('/add_product', function () {
 });
 
 Route::get('showproductdetails/{id}','product@showproductdetails');
+
+Route::get('add-to-cart/{id}', 'product@addToCart');

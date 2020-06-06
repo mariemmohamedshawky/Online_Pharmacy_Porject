@@ -82,6 +82,72 @@ public function showproductdetails($id) {
     $products = DB::select('select * from products where po_id = ?',[$id]);
     return view('productdetails',['products'=>$products]);
     }
+    public function addToCart($id)
+
+
+    {
+        //$products = products::find($id);
+
+        $products = DB::select('select * from products where po_id = ?',[$id]);
+         //  $product= DB::table('products')->where('po_id', $id)->compact(varname);
+        //$product = product::find($id);
+ 
+        if(!$products) {
+ 
+            abort(404);
+ 
+        }
+foreach($products as $p)
+          $name=$p->po_name;
+       $price=$p->po_price;
+           $img=$p->po_img;
+
+  //endforeach;
+
+        $cart = session()->get('cart');
+ 
+        // if cart is empty then this the first product
+        if(!$cart) {
+     
+            $cart = [
+                    $id => [
+
+                        "name" =>  $name        ,
+                        "quantity" => 1,
+                        "price" => $price,
+                        "photo" => $img
+                    ]
+            ];
+ 
+            session()->put('cart', $cart);
+ 
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+        }
+ 
+        // if cart not empty then check if this product exist then increment quantity
+        if(isset($cart[$id])) {
+ 
+            $cart[$id]['quantity']++;
+ 
+            session()->put('cart', $cart);
+ 
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+ 
+        }
+ 
+        // if item not exist in cart then add to cart with quantity = 1
+        $cart[$id] = [
+         
+                        "name" =>  $name        ,
+                        "quantity" => 1,
+                        "price" => $price,
+                        "photo" => $img
+        ];
+ 
+        session()->put('cart', $cart);
+ 
+        return redirect()->back()->with('success', 'Product added to cart successfully!');
+    }
 }
 
 

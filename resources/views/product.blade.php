@@ -14,7 +14,7 @@
 
         <div class="col-lg-2 col-md-3 col-sm-6 col-6" style=" height:470px;">
 
-            <div class="card" style="width: 14rem;height:400px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #000000;opacity: 90%; border-radius: 35px;">
+            <div class="card" style="width: 14rem;height:420px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #000000;opacity: 90%; border-radius: 35px;">
                 <img class="card-img-top"src=" /images/{{ $product->po_img }}" alt="{{ $product->po_img }}" value = '<?php echo$products[0]->po_img; ?>' style="width:200px;height:200px;">
              
                 <div class="card-body">
@@ -24,12 +24,8 @@
                        <div class="form-actions no-color" style="position:center;margin:12px;margin-bottom:5px;">
     
                   
-                   
-                              
                      
-                      <div><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="Add To Card">
-                      </a>
-                      </div>
+                     
 
                       <div><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="View  Details">
                       </a>
