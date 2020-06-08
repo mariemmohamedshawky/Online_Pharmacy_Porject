@@ -148,6 +148,10 @@ foreach($products as $p)
  
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
+    public function cart()
+    {
+        return view('cart');
+    }
 }
 
 
