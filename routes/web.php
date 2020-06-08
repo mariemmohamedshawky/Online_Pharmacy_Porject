@@ -59,3 +59,5 @@ Route::get('showproductdetails/{id}','product@showproductdetails');
 Route::get('add-to-cart/{id}', 'product@addToCart');
 
 Route::get('cart', 'product@cart');
+
+Route::delete('remove-from-cart', 'product@remove');
