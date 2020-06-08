@@ -22,9 +22,10 @@
             <th style="width:22%" class="text-center">Subtotal</th>
             <th style="width:10%"></th>
         </tr>
+        
         </thead>
         <tbody>
- 
+
         <?php $total = 0 ?>
  
         @if(session('cart'))
@@ -50,7 +51,11 @@
                      
                  
                      <td class="actions" data-th="">
-                  <button class=" btn btn-info btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i> Delete</button>
+                         <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i>Update</button>
+                        </td>
+                        <td>
+                  <button class=" btn btn-info btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i>delete</button>
+              </td>
                 </tr>
             @endforeach
         @endif
@@ -58,20 +63,34 @@
         </tbody>
         <tfoot>
         <tr class="visible-xs">
-            <td class="text-center"><strong>Total {{ $total }}</strong></td>
+            <td class="text-center"><strong>Total {{ $total }} $</strong></td>
         </tr>
 
         <tr>
             <td><a href="{{ url('/user') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
             <td colspan="2" class="hidden-xs"></td>
-            <td class="hidden-xs text-center"><strong>Total ${{ $total }}</strong></td>
+                   <td><a href="{{ url('/confirm') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Confirm Your order </a></td>
         </tr>
         </tfoot>
     </table>
  
  <script >
-
-        $("button").click(function (e) {
+   $(".update-cart").click(function (e) {
+           e.preventDefault();
+ 
+           var ele = $(this);
+ 
+            $.ajax({
+               url: '{{ url('update-cart') }}',
+               method: "patch",
+               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
+               success: function (response) {
+                   window.location.reload();
+               }
+            });
+        });
+ 
+        $(".remove-from-cart").click(function (e) {
             
           e.preventDefault();
  
