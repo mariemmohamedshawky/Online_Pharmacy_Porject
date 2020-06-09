@@ -182,6 +182,15 @@ foreach($products as $p)
             session()->flash('success', 'Cart updated successfully');
         }
     }
+    public function search (Request $request)
+{
+  $search = $request->get('title');
+  $products = DB::table('products')->where('po_name' , 'like' , '%'.$search.'%')->paginate(5);
+  return view('search' , ['products'=>$products]) ;
+  
+    
+}
+
 }
 
 

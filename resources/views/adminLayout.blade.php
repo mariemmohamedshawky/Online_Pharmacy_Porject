@@ -44,6 +44,19 @@
         <a class="nav-link" href="{{url('logout/')}}">Log out</a>
       </li>
         </ul>
+        <form class="navbar-form" role="search" method="get" action="/search"  >
+   <div class="input-group">
+   <input type="text" clss="form-control" placeholder="search" name="title">
+    <div class=input-group-btn>
+        <button class="btn btn-default" type="submit">
+            
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+    </div>
+    
+   </div>
+     
+   </form>
   
   </div>
 </nav>

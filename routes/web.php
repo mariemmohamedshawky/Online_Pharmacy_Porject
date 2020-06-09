@@ -65,3 +65,5 @@ Route::delete('remove-from-cart', 'product@remove');
 
 Route::patch('update-cart', 'product@update');
 
+Route::get('/search',"product@search" );
+

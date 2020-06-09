@@ -24,9 +24,9 @@
                        <div class="form-actions no-color" style="position:center;margin:12px;margin-bottom:5px;">
     
                   
-                     <div class="btn-holder"><a href='add-to-cart/{{ $product->po_id }}' class="btn btn-primary mt-4 mb-10" role="button">Add to cart</a> </p></div>
+                     <div class="btn-holder"><a href='add-to-cart/{{ $product->po_id }}' class="btn btn-primary mt-4 mb-10" role="button">Add To Cart</a> </p></div>
 
-                      <div><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="View  Details">
+                      <div><a href = 'showproductdetails/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value="View Details">
                       </a>
                       </div>
 

@@ -103,12 +103,29 @@
     </div>
 </div>
  
+   
 
+ 
+       <form class="navbar-form" role="search" method="get" action="/search"  >
+   <div class="input-group">
+   <input type="text" clss="form-control" placeholder="search" name="title">
+    <div class=input-group-btn>
 
-  </li>
+      <button class="btn btn-default" type="submit">
 
+            
+
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+       
+    </div>
+    
+   </div>
+     
+   </form>
 
       @endguest
+       </li>
   
     </ul>
   

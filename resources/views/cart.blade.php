@@ -54,7 +54,7 @@
                          <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i>Update</button>
                         </td>
                         <td>
-                  <button class=" btn btn-info btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i>delete</button>
+                  <button class=" btn btn-info btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i>Delete</button>
               </td>
                 </tr>
             @endforeach
