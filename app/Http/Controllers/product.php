@@ -190,6 +190,15 @@ foreach($products as $p)
   
     
 }
+public function search_admin (Request $request)
+{
+  $search_admin = $request->get('titlea');
+  $products = DB::table('products')->where('po_name' , 'like' , '%'.$search_admin.'%')->paginate(5);
+  return view('search_admin' , ['products'=>$products]) ;
+  
+    
+}
+
 
 }
 

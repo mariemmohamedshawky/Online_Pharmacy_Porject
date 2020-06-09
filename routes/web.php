@@ -67,3 +67,4 @@ Route::patch('update-cart', 'product@update');
 
 Route::get('/search',"product@search" );
 
+Route::get('/search_admin',"product@search_admin" );
