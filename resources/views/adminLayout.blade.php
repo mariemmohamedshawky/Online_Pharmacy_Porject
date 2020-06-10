@@ -29,9 +29,13 @@
         <li class="nav-item active">
      
         <li class="nav-item active">
-        <a class="nav-link" href="{{url('View Orders')}}">View Orders <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{url('order')}}">View Orders <span class="sr-only">(current)</span></a>
       </li>
-        
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url('view_users')}}">View Users <span class="sr-only">(current)</span></a>
+      </li>
+      
       @guest
        
 

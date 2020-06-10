@@ -246,4 +246,20 @@ echo 'your cart is empty choose the products first';
 
 
 }
+
+
+public  function view_user(){
+       $users = DB::select('select * from users ');  
+    
+     return view('view_users',compact('users'));  
+   
+     
+        }
+        
+    public  function view_order(){
+        $orders = DB::select('select * from orders ');  
+    
+        return view('order',compact('orders')); 
+
+}
 }

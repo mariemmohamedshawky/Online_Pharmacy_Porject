@@ -73,3 +73,7 @@ Route::get('/confirm', function () {
     return view('confirm');
 });
 Route::get('/make_order', 'product@make_order');
+
+Route::get('/view_users',"product@view_user" );
+
+Route::get('/order',"product@view_order" );
