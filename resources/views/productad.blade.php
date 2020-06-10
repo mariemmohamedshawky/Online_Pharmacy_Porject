@@ -25,7 +25,7 @@
                   
                        
                       
-                      <td><a href = 'showproductdetails/{{ $product->po_id }}<'  ><input type="submit" class="btn btn-primary mt-4 mb-10" value="View"><a></td>
+                      <td><a href = 'showproductdetailsadmin/{{ $product->po_id }}<'  ><input type="submit" class="btn btn-primary mt-4 mb-10" value="View"><a></td>
      
                               
                      <td><a href = 'edit/{{ $product->po_id }}<' ><input type="submit" class="btn btn-primary mt-4 mb-10" value=" Update "><a></td>
