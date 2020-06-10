@@ -61,7 +61,7 @@
                             
                             <div class="input-wrap" data-for="email">
                             <label class="form-label-outside mbr-lighter" for="form-1-email">Price:</label>
-                            <input type="text" class="form-control" name="price" data-form-field="Email" required="" id="email-form4-1" value = '<?php echo$products[0]->po_price ; ?>'/> >
+                            <input type="text" class="form-control" name="price" data-form-field="Email" required="" id="email-form4-1" value = '<?php echo$products[0]->po_price ; ?>'/> 
                         </div>
                         
                     

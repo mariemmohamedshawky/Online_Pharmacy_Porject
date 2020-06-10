@@ -198,10 +198,52 @@ public function search_admin (Request $request)
   
     
 }
+public  function make_order(){
+      
+
+
+
+    
+        
+if(session('cart')){
+    $total = 0;
+            foreach(session('cart') as $id => $details){
+ 
+ 
+         $name= $details['name'];
+
+          $username = request("_name");
+           $price=$details['price'];
+            $q=$details['quantity'];
+          
+          // unset($_session['cart']);
+        
+      //    $t=$ $details['price'] * $details['quantity'];
+          $phone= request("phone");
+            $address =request("Address");
+              $way =request("pay");
+    
+          $email = request("email");
+
+$data=array('user_name'=>$username,"email"=>$email,"product_name"=>$name,"product_price"=>$price,"product_quantity"=>$q,"phone"=>  $phone,"address"=>$address,"payWay"=>  $way);
+
+
+DB::table('orders')->insert($data);
+  $cart=session()->get('cart');
+
+session()->flash('cart', $cart);
+
+   }
+
+
+ 
+
+}
+  else
+    
+echo 'your cart is empty choose the products first';
+
 
 
 }
-
-
-
-
+}
