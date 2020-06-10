@@ -235,9 +235,12 @@ session()->flash('cart', $cart);
 
    }
 
+if($way=='online')
 
+return view('payonline');
+else
  
-
+return view('bill');
 }
   else
     

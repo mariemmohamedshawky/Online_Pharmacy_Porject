@@ -1,59 +1,32 @@
+@extends("layout")
+@section("content")
+
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <!-- Site made with Mobirise Website Builder v4.8.8, https://mobirisethemes.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.8.8, mobirisethemes.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title> Product Details</title>
-  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap-reboot.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap-grid.min.css')}}">
-
- <link rel="stylesheet" href="{{asset('css/tether.min.css')}}">
-
-<link rel="stylesheet" href="{{asset('css/stylec.css')}}">
-<link rel="stylesheet" href="{{asset('css/styles.css')}}">
+  <title>The Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <body>
 
 
 
-
-
-
-  
-  
-  
-</head>
-<body>
-
-
-<section class="form4 cid-raTI7nYObn" id="form4-1">
-
-   <div class="container">
-        
-        
+                 <div class="container">
                  <div class="row justify-content-center">
                  <div class="col-md-8 col-lg-6 form-wrapper" data-form-type="formoid">  
-                <div class="form-head">
-                   
-                  
-                </div>
+                
 
 
 
 <h3 style="text-align: center; margin: 50px; font-family:'Lucida Handwriting';text-transform:uppercase;font-weight:bolder;color:midnightblue;">PRODUCT DETAILS</h3>
 @foreach ($products as $product)
 
-<div class="card" style="width: 34rem;height:650px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background:#CCEEFF;">
+<div class="card" style="width: 34rem;height:710px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background:#CCEEFF;">
 <br>
 
                      <dt style="font-family:Lucida Handwriting;text-align: center;text-transform:uppercase;font-weight:bolder;color:midnightblue;font-size: 25px;">
                       <?php echo$products[0]->po_name; ?> 
                      </dt>
-                <img src=" /images/{{ $product->po_img }}" alt="{{ $product->po_img }}" value = '<?php echo$products[0]->po_img; ?>' style="float:left;width:300px;height:300px;">
+                <img src=" /images/{{ $product->po_img }}" alt="{{ $product->po_img }}" value = '<?php echo$products[0]->po_img; ?>' style="float:left;width:250px;height:250px;">
 
                 <div class="card-body">
                     <div class="card-title" style="margin-bottom: 25px;text-align:center;font-size:15px;font-weight:bold;">
@@ -84,6 +57,10 @@
                    <dt style="font-family: Comic Sans MS; font-size: 15px">
                      <?php echo$products[0]->po_date; ?>
                      </dt>
+                     
+                     <div class="btn-holder"><a href='add-to-cart/{{ $product->po_id }}' class="btn btn-primary mt-4 mb-10" role="button">Add To Cart</a> </p></div>
+
+  
 
 </div>
 @endforeach
@@ -91,8 +68,8 @@
 </div>
    </div>
   </div>
-</section>
-  
+
   
 </body>
 </html>
+@endsection 

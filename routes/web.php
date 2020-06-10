@@ -26,10 +26,12 @@ Route::post('edit/{id}','product@edit');
 Route::get('delete/{id}','product@destroy');
 
 Route::get('/logout', function () {
+	       $cart=session()->get('cart');
+
+session()->flash('cart', $cart);
 	Auth::logout();
 	return view('home');
 });
-
 
 Route::get('/', function () {
     return view('home');
@@ -55,6 +57,7 @@ Route::get('/add_product', function () {
 });
 
 Route::get('showproductdetails/{id}','product@showproductdetails');
+Route::get('showproductdetails/add-to-cart/{id}','product@addToCart');
 
 Route::get('add-to-cart/{id}', 'product@addToCart');
 
@@ -77,3 +80,11 @@ Route::get('/make_order', 'product@make_order');
 Route::get('/view_users',"product@view_user" );
 
 Route::get('/order',"product@view_order" );
+
+Route::get('/bill', function () {
+    return view('bill');
+});
+
+Route::get('/back', function () {
+    return redirect('/user');
+});
