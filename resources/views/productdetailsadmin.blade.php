@@ -21,7 +21,7 @@
 <h3 style="text-align: center; margin: 50px; font-family:'Lucida Handwriting';text-transform:uppercase;font-weight:bolder;color:midnightblue;">PRODUCT DETAILS</h3>
 @foreach ($products as $product)
 
-<div class="card" style="width: 34rem;height:710px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background:#CCEEFF;">
+<div class="card" style="width: 34rem;height:610px; margin:20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background:#CCEEFF;">
 <br>
 
                      <dt style="font-family:Lucida Handwriting;text-align: center;text-transform:uppercase;font-weight:bolder;color:midnightblue;font-size: 25px;">

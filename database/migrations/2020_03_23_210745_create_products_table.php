@@ -21,8 +21,8 @@ class CreateProductsTable extends Migration
             $table->string('po_description');
             $table->date('po_date');
             $table->string('po_img');
-            $table->bigInteger('po_user')->unsigned();
-           $table->foreign('po_user')->references('id')->on('users')->onDelete('cascade') ;
+           // $table->bigInteger('po_user')->unsigned();
+        //$table->foreign('po_user')->references('id')->on('users')->onDelete('cascade') ;
         });
     
     }
